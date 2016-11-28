@@ -1,8 +1,9 @@
-
+//global variables
 var userInput = document.getElementById('search');
 var userInputYear = document.getElementById('year');
 var submitBtn = document.getElementById('submit');
 
+//User enters movie and clicks search - start our Ajax request
 submitBtn.addEventListener('click', function(event) {
 	event.preventDefault();
 	movieSearch();
@@ -38,6 +39,7 @@ function movieSearch () {
 		      		movieHTML += ' <span class="movie-year"> ' + movies[i].Year + ' </span></a></li> ';
 	    		}
 	    	}
+			//show the movies on the page
 	    	document.getElementById('movies').innerHTML = movieHTML;
 		}
 	};
